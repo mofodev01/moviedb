@@ -1,0 +1,66 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+// color change from #cd4851 to #fa6706
+
+ion-content{
+    --ion-background-color: rgb(0, 0, 0);  
+    font-family: 'Oxygen', sans-serif;
+}
+
+ion-tab-bar {
+    --background: black;
+    --color: white;
+    font-family: 'Oxygen', sans-serif;
+
+} 
+
+ion-tab-button {
+    --color-selected: #fa6706;
+}
+
+ion-toolbar {
+    --background: black;
+    --color: #fa6706;
+    --opacity: 1.0;
+    font-family: 'Oxygen', sans-serif;
+
+    ion-button {
+        --color: #fa6706 !important;
+        --color-activated: #fa6706 !important;
+    }
+}
+
+ion-back-button {
+    --color: #fa6706 !important;
+}
+
+ion-spinner {
+    --color: white;
+}
+
+
+.toolbar-background-md, .toolbar-background-ios,.toolbar-background-wp {
+    background-color: white;
+}
+
+.loading-icon-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+ 
+  

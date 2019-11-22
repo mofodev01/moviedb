@@ -1,0 +1,9 @@
+pass: mofodev-mf-100
+
+nom : mofo dev
+organiz: mofodev
+nom entreprise: mofodev
+location: colorado
+pays : usa
+
+alias_name pass: mofodev-mf-100

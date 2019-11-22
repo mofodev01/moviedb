@@ -1,0 +1,7 @@
+{
+  "name": "moviedv",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
