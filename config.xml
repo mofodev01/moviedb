@@ -18,7 +18,7 @@
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashScreenDelay" value="7000" />
     <preference name="android-targetSdkVersion" value="28" />
     <preference name="YouTubeDataApiKey" value="AIzaSyCSllJn0jW7kf9zIpWyPbORJ1WQ3yBGzXM" />
     <platform name="android">
