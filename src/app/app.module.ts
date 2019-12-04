@@ -16,6 +16,7 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
 import { Market } from '@ionic-native/market/ngx';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 
 /* Components */
@@ -45,7 +46,8 @@ import { CustomErrorHandler } from './core/custom-error-handler';
     { provide: ErrorHandler, useClass: CustomErrorHandler },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AdMobFree,
-    Market
+    Market,
+    YoutubeVideoPlayer
   ],
   bootstrap: [AppComponent]
 })

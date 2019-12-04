@@ -10,7 +10,6 @@ import { CoreService } from 'src/app/services/core/core.service';
 import { MovieService } from "src/app/services/movie/movie.service";
 
 /*plugins**/
-import { AdMobFree,AdMobFreeInterstitialConfig } from '@ionic-native/admob-free/ngx';
 
 @Component({
   selector: "app-home",
@@ -25,55 +24,11 @@ export class HomePage implements OnInit {
   selectedCategory: string = "popular";
   isDataLoaded: boolean = false;
   constructor(private movieService: MovieService, private coreService: CoreService,
-    private admobFree: AdMobFree,
     public Platform : Platform) {}
 
   ngOnInit(): void {
     this.getMovies("popular", 1);
   }
-
-//////////////////  admob
-
-
-launchInterstitial() {
-  if (this.Platform.is('android')) {
-  const interstitialConfig: AdMobFreeInterstitialConfig = {
-          isTesting: true,// Remove in production
-          autoShow: true,
-      //id: Your Ad Unit ID goes here
-     //id:'ca-app-pub-3000905870244951/5491408793'
-  };
-
-  this.admobFree.interstitial.config(interstitialConfig);
-
-  
-  this.admobFree.interstitial.prepare().then(() => {
-      // success
-      
-  });
-
-   }else if (this.Platform.is('ios')) {
-    const interstitialConfig: AdMobFreeInterstitialConfig = {
-      isTesting: true,// Remove in production
-      autoShow: true,
-  //id: Your Ad Unit ID goes here
- //id:'ca-app-pub-3000905870244951/5491408793'
-};
-
-this.admobFree.interstitial.config(interstitialConfig);
-
-
-this.admobFree.interstitial.prepare().then(() => {
-  // success
-  
-});
-
-  } 
-
-}
-
-//////////////////  admob
-
 
 
   public changeCategory(category: string) {

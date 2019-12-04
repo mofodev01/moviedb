@@ -146,7 +146,7 @@ export class MovieService {
         let trailerList = response.results.filter(x => { return x.site == "YouTube" });
         if (trailerList.length != 0) {
           let trailer = trailerList[0];
-          let youtubeURL = 'https://www.youtube.com/watch?v=' + trailer.key;
+          let youtubeURL = trailer.key;
           return youtubeURL;
         } else {
           return null;
