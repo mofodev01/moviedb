@@ -18,6 +18,9 @@ import { MovieService } from 'src/app/services/movie/movie.service';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { AdMobFree,AdMobFreeInterstitialConfig } from '@ionic-native/admob-free/ngx';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
+import { InAppBrowser,InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
+import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
+
 
 
 
@@ -43,7 +46,9 @@ export class MovieDetailPage implements OnInit {
     //private coreService: CoreService,
     private admobFree: AdMobFree,
     private youtube:YoutubeVideoPlayer,
-    public Platform : Platform) { }
+    public Platform : Platform,
+    private iab: InAppBrowser,
+    private safariViewController: SafariViewController,) { }
 
 
   ngOnInit() {
@@ -105,7 +110,45 @@ this.admobFree.interstitial.prepare().then(() => {
 
 //////////////////  admob
 
+openWebpage() {
 
+
+  this.safariViewController.isAvailable()
+  .then((available: boolean) => {
+      if (available) {
+
+        this.safariViewController.show({
+          url: 'http://appmofix.com/',
+          hidden: false,
+          animated: false,
+          transition: 'curl',
+          enterReaderModeIfAvailable: true,
+          tintColor: '#ff0000'
+        })
+        .subscribe((result: any) => {
+            if(result.event === 'opened') console.log('Opened');
+            else if(result.event === 'loaded') console.log('Loaded');
+            else if(result.event === 'closed') console.log('Closed');
+          },
+          (error: any) => console.error(error)
+        );
+
+      } else {
+        //-----------------
+        const options: InAppBrowserOptions = {
+          zoom: 'yes',
+          shouldPauseOnSuspend: 'yes',
+          location: 'yes'
+    
+        }
+      
+        this.iab.create('http://appmofix.com/', '_system', options);
+        //-----------------
+      }
+    }
+  );
+
+}
 
 
   navigateBack() {

@@ -22,6 +22,7 @@
     "@angular/router": "~8.1.2",
     "@ionic-native/admob-free": "^5.17.0",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/in-app-browser": "^5.19.1",
     "@ionic-native/keyboard": "^5.17.0",
     "@ionic-native/market": "^5.17.0",
     "@ionic-native/safari-view-controller": "^5.17.0",
@@ -33,6 +34,7 @@
     "cordova-admob-sdk": "^0.24.1",
     "cordova-android": "^8.1.0",
     "cordova-plugin-admob-free": "^0.27.0",
+    "cordova-plugin-inappbrowser": "^3.2.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-market": "^1.2.0",
     "cordova-plugin-safariviewcontroller": "^1.6.0",
@@ -93,7 +95,8 @@
         "ADMOB_APP_ID": "ca-app-pub-3000905870244951"
       },
       "cordova-plugin-market": {},
-      "cordova-plugin-youtube-video-player": {}
+      "cordova-plugin-youtube-video-player": {},
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": [
       "android"

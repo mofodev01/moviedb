@@ -17,7 +17,7 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
 import { Market } from '@ionic-native/market/ngx';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
-
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 /* Components */
 import { AppComponent } from './app.component';
@@ -47,7 +47,8 @@ import { CustomErrorHandler } from './core/custom-error-handler';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AdMobFree,
     Market,
-    YoutubeVideoPlayer
+    YoutubeVideoPlayer,
+    InAppBrowser
   ],
   bootstrap: [AppComponent]
 })
