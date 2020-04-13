@@ -16,7 +16,6 @@ import { MovieService } from 'src/app/services/movie/movie.service';
 /* Components */
 /* Plugins */
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-import { AdMobFree,AdMobFreeInterstitialConfig } from '@ionic-native/admob-free/ngx';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 import { InAppBrowser,InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
 import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
@@ -44,7 +43,7 @@ export class MovieDetailPage implements OnInit {
     private movieService: MovieService,
     private socialSharing: SocialSharing,
     //private coreService: CoreService,
-    private admobFree: AdMobFree,
+    
     private youtube:YoutubeVideoPlayer,
     public Platform : Platform,
     private iab: InAppBrowser,
@@ -52,7 +51,7 @@ export class MovieDetailPage implements OnInit {
 
 
   ngOnInit() {
-    this.launchInterstitial();
+    //this.launchInterstitial();
     this.movieID = this.activatedRoute.snapshot.paramMap.get('movieID');
     setTimeout(() => {
       this.getMovieDetail();
@@ -63,52 +62,7 @@ export class MovieDetailPage implements OnInit {
     }, 500);
   }
 
-//////////////////  admob
 
-
-launchInterstitial() {
-  if (this.Platform.is('android')) {
-  const interstitialConfig: AdMobFreeInterstitialConfig = {
-          //isTesting: true,// Remove in production
-          autoShow: true,
-      //id: Your Ad Unit ID goes here
-     id:'ca-app-pub-3000905870244951/4513251426'
-  };
-
-  this.admobFree.interstitial.config(interstitialConfig);
-
-  
-  this.admobFree.interstitial.prepare().then(() => {
-      // success
-      //console.log('admob inter is lunched here.')
-  });
-
-  }else if (this.Platform.is('ios')) {
-    const interstitialConfig: AdMobFreeInterstitialConfig = {
-      //isTesting: true,// Remove in production
-      autoShow: true,
-  //id: Your Ad Unit ID goes here
- id:'ca-app-pub-3000905870244951/8303472562'
-};
-
-this.admobFree.interstitial.config(interstitialConfig);
-
-
-this.admobFree.interstitial.prepare().then(() => {
-  // success
-  
-});
-
-  } 
-
-}
-
-
-
-
-
-
-//////////////////  admob
 
 openWebpage() {
 
