@@ -91,7 +91,7 @@ launchInterstitial() {
   if (this.Platform.is('android')) {
   const interstitialConfig: AdMobFreeInterstitialConfig = {
           //isTesting: true,// Remove in production
-          autoShow: true,
+          autoShow: false,
       //id: Your Ad Unit ID goes here
      id:'ca-app-pub-3000905870244951/4513251426'
   };
@@ -107,7 +107,7 @@ launchInterstitial() {
   }else if (this.Platform.is('ios')) {
     const interstitialConfig: AdMobFreeInterstitialConfig = {
       //isTesting: true,// Remove in production
-      autoShow: true,
+      autoShow: false,
   //id: Your Ad Unit ID goes here
  id:'ca-app-pub-3000905870244951/8303472562'
 };
