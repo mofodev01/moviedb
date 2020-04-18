@@ -46,7 +46,7 @@ export class AppComponent {
       //isTesting: true,// Remove in production
       autoShow: true,
       bannerAtTop:true,
-      id:'ca-app-pub-3000905870244951/4974601646'
+      id:'ca-app-pub-3000905870244951/7885820888'
   
   
      };
