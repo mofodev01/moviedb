@@ -93,7 +93,7 @@ launchInterstitial() {
           //isTesting: true,// Remove in production
           autoShow: true,
       //id: Your Ad Unit ID goes here
-     id:'ca-app-pub-3000905870244951/4513251426'
+     id:'ca-app-pub-3000905870244951/2441922511'
   };
 
   this.admobFree.interstitial.config(interstitialConfig);
